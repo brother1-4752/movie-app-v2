@@ -58,7 +58,7 @@ function Sidebar() {
   );
 }
 
-export default function Root() {
+export default function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
