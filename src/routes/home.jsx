@@ -35,6 +35,17 @@ function Header() {
           <button onClick={handleMenuBtn}>메뉴</button>
           <a href="/">홈</a>
         </div>
+        <div className="header__mid">
+          <form method="POST">
+            <input type="text" name="header__search" />
+            <button>검색</button>
+          </form>
+        </div>
+        <div className="header__right">
+          <a href="/login">로그인</a>
+          <a href="/signup">회원가입</a>
+          <button>다크모드</button>
+        </div>
       </header>
       <Sidebar />
     </MenuContext.Provider>

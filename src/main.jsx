@@ -5,6 +5,7 @@ import "./index.css";
 import Home from "./routes/home";
 import Authorization from "./components/authorization";
 import Login from "./routes/login";
+import Signup from "./routes/singup";
 
 const RouterInfo = [
   {
@@ -18,11 +19,11 @@ const RouterInfo = [
     element: <Login />,
     withAuthorization: true,
   },
-  // {
-  //   path: "/signup",
-  //   element: <Signup />,
-  //   withAuthorization: true,
-  // },
+  {
+    path: "/signup",
+    element: <Signup />,
+    withAuthorization: true,
+  },
 ];
 
 const ReactRouterObject = createBrowserRouter(

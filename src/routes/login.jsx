@@ -3,7 +3,9 @@ import Footer from "../components/footer";
 export default function Login() {
   return (
     <>
-      <h1>MOVIE CAT</h1>
+      <h1>
+        <a href="/">MOVIE CAT : 로그인</a>
+      </h1>
       <form method="POST">
         <input type="text" name="" id="" />
         <input type="password" name="" id="" />
@@ -24,7 +26,7 @@ export default function Login() {
         <span>|</span>
         <div>아이디 찾기</div>
         <span>|</span>
-        <div>회원가입</div>
+        <a href="/signup">회원가입</a>
       </div>
       <Footer />
     </>
