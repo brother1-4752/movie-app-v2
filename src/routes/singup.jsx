@@ -18,7 +18,7 @@ export default function Signup() {
             <span>IP보안</span>
             <button>토글버튼</button>
           </div>
-          <button type="submit">로그인</button>
+          <button type="submit">회원가입</button>
         </div>
       </form>
       <div>
@@ -26,7 +26,7 @@ export default function Signup() {
         <span>|</span>
         <div>아이디 찾기</div>
         <span>|</span>
-        <div>회원가입</div>
+        <div>로그인</div>
       </div>
       <Footer />
     </>
