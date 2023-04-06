@@ -1,7 +1,29 @@
-import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { useState, useEffect, createContext } from "react";
 import Header from "../components/header";
-import Category from "../components/category";
+import { Outlet } from "react-router-dom";
+import styled from "styled-components";
+import Movie from "./movie";
+
+// const ApiInfo = [
+//   {
+//     label: "홈 렌더링될 때",
+//     condition: "",
+//   },
+//   {
+//     label: "검색할 때",
+//     condition: "?쿼리 키워드",
+//   },
+//   {
+//     label: "사이드바 메뉴 클릭할 때",
+//     condition: "사이드바 메뉴 데이터셋값에 따라",
+//   },
+//   {
+//     label: "카테고리 버튼 클릭할 때",
+//     condition: "카테고리버튼 데이터셋값에 따라",
+//   },
+// ];
+
+export const MovieContext = createContext();
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
@@ -12,16 +34,33 @@ export default function Home() {
       .then((json) => setMovies(json.data.movies));
   }, []);
 
-  console.log(`루트컴포넌트 API호출`, movies);
+  console.log("***HOME 렌더***", movies);
 
   return (
-    // 여기에 MovieContext가 있네...컴포넌트 헤더, 카테고리, 사이드바 다 분리시켰는데... 고민해보자
     <MovieContext.Provider value={{ movies, setMovies }}>
       <Header />
-      <Category />
-      <div>
-        <Outlet />
-      </div>
+      <MovieList>
+        {movies.map((movie) => (
+          <Movie
+            key={movie.id}
+            movie_id={movie.id}
+            mainImg={movie.medium_cover_image}
+            title={movie.title}
+            rating={movie.rating}
+            year={movie.year}
+            genres={movie.genres}
+          />
+        ))}
+      </MovieList>
     </MovieContext.Provider>
   );
 }
+
+const MovieList = styled.ul`
+  margin-top: 55px;
+  height: 60vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
