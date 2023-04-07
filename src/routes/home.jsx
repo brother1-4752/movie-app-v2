@@ -3,6 +3,7 @@ import Header from "../components/header";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Movie from "./movie";
+import Category from "../components/category";
 
 // const ApiInfo = [
 //   {
@@ -39,6 +40,7 @@ export default function Home() {
   return (
     <MovieContext.Provider value={{ movies, setMovies }}>
       <Header />
+      <Category />
       <MovieList>
         {movies.map((movie) => (
           <Movie
