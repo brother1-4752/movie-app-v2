@@ -5,25 +5,6 @@ import styled from "styled-components";
 import Movie from "./movie";
 import Category from "../components/category";
 
-// const ApiInfo = [
-//   {
-//     label: "홈 렌더링될 때",
-//     condition: "",
-//   },
-//   {
-//     label: "검색할 때",
-//     condition: "?쿼리 키워드",
-//   },
-//   {
-//     label: "사이드바 메뉴 클릭할 때",
-//     condition: "사이드바 메뉴 데이터셋값에 따라",
-//   },
-//   {
-//     label: "카테고리 버튼 클릭할 때",
-//     condition: "카테고리버튼 데이터셋값에 따라",
-//   },
-// ];
-
 export const MovieContext = createContext();
 
 export default function Home() {

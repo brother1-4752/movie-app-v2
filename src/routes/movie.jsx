@@ -73,39 +73,3 @@ const GenreItem = styled.li`
   margin: 5px 5px 0 0;
   font-size: 13px;
 `;
-
-// <------------------>
-
-// import React, { useState } from "react";
-
-// const Header = () => {
-//   const [searchQuery, setSearchQuery] = useState("");
-//   const [searchResult, setSearchResult] = useState([]);
-
-//   const handleSearch = async (e) => {
-//     e.preventDefault();
-//     const response = await fetch(`https://api.example.com/search?q=${searchQuery}`);
-//     const data = await response.json();
-//     setSearchResult(data);
-//   };
-
-//   const handleInputChange = (e) => {
-//     setSearchQuery(e.target.value);
-//   };
-
-//   return (
-//     <header>
-//       <form onSubmit={handleSearch} method="POST">
-//         <input type="text" value={searchQuery} onChange={handleInputChange} />
-//         <button type="submit">Search</button>
-//       </form>
-//       <ul>
-//         {searchResult.map((result) => (
-//           <li key={result.id}>{result.title}</li>
-//         ))}
-//       </ul>
-//     </header>
-//   );
-// };
-
-// export default Header;

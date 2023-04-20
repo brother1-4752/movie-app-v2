@@ -6,13 +6,7 @@ import styled from "styled-components";
 export default function Category() {
   const { movies, setMovies } = useContext(MovieContext);
 
-  return (
-    <CategoryBox>
-      <StyledLink>A</StyledLink>
-      <StyledLink>B</StyledLink>
-      <StyledLink>C</StyledLink>
-    </CategoryBox>
-  );
+  return <CategoryBox></CategoryBox>;
 }
 
 const CategoryBox = styled.section``;
